@@ -37,6 +37,11 @@ dependencies:
   cupertino_icons: ^1.0.6
   just_audio: ^0.9.39
   fluent_ui: ^4.9.1
+  fluentui_system_icons: ^1.1.252
+  postgres: ^3.2.1
+  just_waveform: ^0.0.5
+  audio_service: ^0.18.15
+  audio_session: ^0.1.21
 
 dev_dependencies:
   flutter_test:
