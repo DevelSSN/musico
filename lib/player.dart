@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:just_audio/just_audio.dart';
 
 class Player extends StatefulWidget {
   const Player({super.key});
@@ -21,10 +22,24 @@ class _PlayerState extends State<Player> {
               'Musico',
             ),
           ),
+          body: const Row(children: [
+            Icon(Icons.skip_previous),
+            Icon(Icons.play_arrow),
+            Icon(Icons.arrow_forward)
+          ]),
         ));
   }
 }
 
-Widget Loader() {
+Widget loader() {
   return const Placeholder();
+}
+
+class AudioHandler {
+  AudioHandler() {
+    final _player = AudioPlayer();
+    Future<void> play() => _player.play();
+    Future<void> pause() => _player.pause();
+    Future<void> stop() => _player.stop();
+  }
 }
